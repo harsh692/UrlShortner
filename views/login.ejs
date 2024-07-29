@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        body{
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>login</title>
+</head>
+<body>
+    <h1>login</h1>
+    <form action="/user/login" method="post" onsubmit="(e)=>{
+        e.preventDefault();
+    }">
+
+
+        <label for="">email</label>
+        <input type="text" required name="email"><br>
+
+        <label for="">password</label>
+        <input type="text" required name="password"><br>
+
+        <button type="submit">submit</button>
+
+    </form>
+
+</body>
+</html>

@@ -1,0 +1,12 @@
+AUTHENTICATION
+
+1. create a model user.js.
+2. create user.js in routes for routes handling authentication.
+3. Create controller -> user.js , for handling the function inside the routes.
+4. complete the user.js in routes and call it from index.js file.
+5. Create a new route in staticrouters for rendering a sign up page.
+6. create an html signup page with forms.
+
+
+
+In this application we will use stateless authentication with the help of jwt tokens.

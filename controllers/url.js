@@ -12,23 +12,9 @@ async function handleGenerateNewShortUrl(req,res){
         shortId: shortID,
         redirectURL: body.url,
         visitHistory: [],
+        createdBy: req.user._id,
     });
     return res.render("home",{id : shortID});
-}
-
-async function handleRedirecting(req,res){
-    const shortId = req.params.shortId;
-    const entry = await URL.findOneAndUpdate({
-        shortId
-    }, { $push: {
-        visitHistory : {
-            timestamp : Date.now()
-        },
-    },
-}
-
-);
-res.redirect(entry.redirectURL)
 }
 
 async function handleGetAnalytics(req,res){
@@ -41,6 +27,5 @@ async function handleGetAnalytics(req,res){
 }
 module.exports = {
     handleGenerateNewShortUrl,
-    handleRedirecting,
     handleGetAnalytics,
 }
